@@ -1,0 +1,148 @@
+/*
+Colors used:
+Primary Color (Blue): #05676e;
+Primary Light : #465975;
+Primary Dark : #000622;
+Primary Text : #FFFFFF;
+
+Secondary Color (Orange): #489c79;
+Secondary Light : #FF9E78;
+Secondary Dark : #A93F21;
+Secondary Text : #000000;
+*/
+
+/*
+Fonts used:
+Heading: Montserrat;
+Subheading:Libre Franklin (Bold);
+Body: Amiko;
+*/
+
+body {
+  font-family: 'Amiko', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.75em;
+}
+
+h2{
+  font-family: 'legalibre Franklin', sans-serif;
+  font-size: 2.25em;
+  font-weight: 300;
+}
+
+h3{
+  font-family: 'legalibre Franklin', sans-serif;
+  font-size: 1.75em;
+}
+
+img {
+  width: 100%;
+}
+
+.profile{
+  width: 100px;
+}
+a {
+  color:FF7F50;
+  text-decoration: none;
+}
+
+
+a:visited { /* visited link */
+  color: #ff7f50;
+}
+a:active { /* selected link */
+  color: #994c30;
+}
+
+a:hover {
+  color: #CC6540;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #cc6540;
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #ff7f50;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button:active{
+  color: #994c30;
+}
+
+.button.contact:hover {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+
+/*Thumbnail Settings */
+
+.thumbnail {
+  position:relative;
+}
+
+.thumbnail__img {
+  display: block;
+  width: 100%;
+}
+.thumbnail__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.thumbnail__overlay--blur {
+  backdrop-filter: blur(5px);
+}
+
+.thumbnail__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+  color: #000000;
+}
+.thumbnail__overlay:hover {
+  opacity:0.9;
+}
+
+.thumbnail__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.thumbnail__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/thumbnail__cta {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}

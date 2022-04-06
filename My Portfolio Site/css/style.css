@@ -18,14 +18,31 @@ Subheading:Libre Franklin (Bold);
 Body: Amiko;
 */
 
-header {
-  background-color: #000622;
+* {
+  box-sizing: border-box;
 }
+
 body {
+  background-color: #1B3049;
   font-family: 'Amiko', sans-serif;
   font-size: 16px;
   color: #ffffff;
-  background-color: #1B3049;
+}
+
+header {
+  background-color: #000622;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.58);
+  position: fixed;
+  width: 100%;
+}
+
+main {
+  padding-top: 330px;
+}
+footer {
+  background-color: #465975;
 }
 
 h1 {
@@ -44,29 +61,48 @@ h3{
   font-size: 1.75em;
 }
 
-ul{
-  list-style-type: none;
-}
-.secondary{
-  color: #000000
-}
-
 img {
   width: 100%;
 }
 
-.profile{
-  width: 100px;
+.picture {
+  z-index: 1;
 }
+nav {
+  display: inline-block;
+  width: 100%;
+}
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FF7F50;
+}
+
+nav > ul > li > a:visited {
+
+}
+
 a {
-  color:FF7F50;
+  color: #FF7F50;
   text-decoration: none;
 }
 
-
-a:visited { /* visited link */
-  color: #ff7f50;
+/*
+a:visited { /* visited link
+  color: blue;
 }
+*/
+
 a:active { /* selected link */
   color: #994c30;
 }
@@ -76,12 +112,14 @@ a:hover {
   text-decoration: underline;
 }
 
-a:hover,
-a:focus {
+a:hover,a:focus {
   color: #cc6540;
   text-decoration: underline;
 }
 
+.logo{
+  max-width: 250px;
+}
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #ff7f50;
@@ -91,6 +129,7 @@ a:focus {
   border-radius: 3px;
   border-bottom: 2px solid #994c30; /* width of the border, type, color */
   transition: 0.2s opacity;
+  margin-bottom: 10px;
 }
 
 .button:hover {
@@ -111,6 +150,8 @@ a:focus {
 
 .thumbnail {
   position:relative;
+  width: 50%;
+  max-width: 1200px;
 }
 
 .thumbnail__img {
@@ -157,4 +198,43 @@ a:focus {
 /thumbnail__cta {
   font-size: 1.25em;
   margin-top: 0.25em;
+}
+
+
+/* Layout styling */
+
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0;
+}
+
+#hero {
+  background-color: #000622;
+  display: inline-block;
+  padding: 20px 0;
+  width: 100%;
+}
+
+#hero h1 {
+  text-align: center;
+
+}
+
+#work .row {
+  padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact h2{
+  padding-top: 20px;
+}
+#contact svg {
+  width:10%;
+  max-width: 100px;
 }

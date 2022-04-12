@@ -6,23 +6,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script src="https://kit.fontawesome.com/18799e5559.js" crossorigin="anonymous"></script>
     </head>
     <body>
       <header>
         <div class='container'>
-          <img src="img/logo.png" class='logo' alt="Logo">
-          <nav>
-            <ul>
-              <li><a href="index.html">Projects</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+          <div class="navtoggle" id="myNavtoggle">
+            <img src="img/logo.png" class='logo' alt="Logo">
+            <nav>
+              <ul>
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
-
       <main>
-        <div class='container'>
+        <div class='container' id='project'>
           <h2>Project 1: Expert</h2>
           <div>
             <picture>
@@ -223,10 +226,8 @@
       <footer id="contact">
         <div>
           <h2>Get in Touch</h2>
-          <p>
-            Do you like my work and want to discuss opportunities? Please get in touch.
-            Call: +1 555-5555 or Skype me at jeffreychen113. Prefer sending an email?
-          </p>
+          <p>Do you like my work and want to discuss opportunities? Please get in touch.</p>
+            <p>Call: +1 555-5555 or Skype me at jeffreychen113. Prefer sending an email?</p>
 
           <div>
             <a href="mailto:hwchen424@gmail.com" class="button contact">Email me</a>
@@ -248,10 +249,12 @@
           </div>
 
           <div>
-          <p>Copyright Jeffrey Chen 2022</p>
+          <p class='copyright'>Copyright Jeffrey Chen 2022</p>
           </div>
         </div>
       </footer>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="js/scripts.js"></script>
     </body>
 
 </html>

@@ -347,6 +347,15 @@ Medium devices (640px and larger)
   .navtoggle li:last-child {
     display: none;
   }
+
+  .navtoggle.responsive nav {
+    padding: 0px 0 0;
+  }
+
+  .navtoggle.responsive li {
+    padding: 0px 0;
+    border-top: 0px solid rgba(255, 127, 80, 0.5);
+  }
 }
 
 /* ==============================
